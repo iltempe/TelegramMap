@@ -26,8 +26,6 @@ function getUpdates($telegram){
 	
 	$db = new PDO(DB_NAME);
 
-	$data=new getdata();
-
 	$update_manager= new mainloop();
 	
 	// Get all the new updates and set the new correct update_id
@@ -41,7 +39,7 @@ function getUpdates($telegram){
 		$user_id= $telegram->User_id();
 		$location= $telegram->Location();
 		$reply_to_msg= $telegram->ReplyToMessage();
-		$update_manager->shell($telegram,$db,$data,$text,$chat_id,$user_id,$location,$reply_to_msg);
+		$update_manager->shell($telegram,$db,$text,$chat_id,$user_id,$location,$reply_to_msg);
 	}
 
 }

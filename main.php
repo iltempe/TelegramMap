@@ -20,7 +20,6 @@ class mainloop{
 		$today = date("Y-m-d H:i:s");
 		
 		// Instances the class
-		$data=new getdata();
 		$db = new PDO(DB_NAME);
 
 		/* If you need to manually take some parameters
@@ -35,13 +34,13 @@ class mainloop{
 		$location=$update["message"]["location"];
 		$reply_to_msg=$update["message"]["reply_to_message"];
 		
-		$this->shell($telegram, $db,$data,$text,$chat_id,$user_id,$location,$reply_to_msg);
+		$this->shell($telegram, $db,$text,$chat_id,$user_id,$location,$reply_to_msg);
 		$db = NULL;
 
 	}
 
 	//gestisce l'interfaccia utente
-	 function shell($telegram,$db,$data,$text,$chat_id,$user_id,$location,$reply_to_msg)
+	 function shell($telegram,$db,$text,$chat_id,$user_id,$location,$reply_to_msg)
 	{
 		date_default_timezone_set('Europe/Rome');
 		$today = date("Y-m-d H:i:s");
