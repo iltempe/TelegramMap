@@ -86,7 +86,7 @@ class Telegram {
         $this->data = data;
     }
     public function Text() {
-        return $this->data["message"] ["text"];
+        return $this->data["message"]["text"];
     }
     public function ChatID() {
         return $this->data["message"]["chat"]["id"];
