@@ -8,11 +8,8 @@
 	- memorizzazione dati nel DB SQLITE
 	- export in file CSV e MAPPING
  */
-//include(dirname(__FILE__).'/../settings.php');
 include('settings_t.php');
-//include(dirname(dirname(__FILE__)).'/getting.php');
 include("Telegram.php");
-include("broadcast.php");
 
 class mainloop{
  
