@@ -73,7 +73,7 @@ class mainloop{
 				$log=$today. ";information for maps recorded;" .$chat_id. "\n";	
 				
 				//aggiorno dati mappa
-				exec('sqlite3 -header -csv emergenzeprato.sqlite "select * from segnalazioni;" > map_data.csv');
+				exec('sqlite3 -header -csv db.sqlite "select * from segnalazioni;" > map_data.csv');
 			}			
 			//comando errato
 			else{
