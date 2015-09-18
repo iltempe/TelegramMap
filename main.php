@@ -8,7 +8,7 @@
 	- memorizzazione dati nel DB SQLITE
 	- export in file CSV e MAPPING
  */
-include('settings_t.php');
+//include('settings_t.php');
 include("Telegram.php");
 
 class mainloop{
