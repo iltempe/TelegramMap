@@ -192,7 +192,7 @@ class Telegram {
     }
 	
     public function getUpdates($offset = 0, $limit = 100, $timeout = 0, $update = true) {
-        $content = array('offset' => $offset, 'limit' => $limit, 'timeout' => $timeot);
+        $content = array('offset' => $offset, 'limit' => $limit, 'timeout' => $timeout);
         $reply = $this->endpoint("getUpdates", $content);
         $this->updates = json_decode($reply, true);
         if ($update) {
