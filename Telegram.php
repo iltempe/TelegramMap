@@ -197,7 +197,7 @@ class Telegram {
         $this->updates = json_decode($reply, true);
         if ($update) {
             $last_element_id = $this->updates["result"][count($this->updates["result"]) - 1]["update_id"] + 1;
-            $content = array('offset' => $last_element_id, 'limit' => "1", 'timeout' => $timeot);
+            $content = array('offset' => $last_element_id, 'limit' => "1", 'timeout' => $timeout);
             $this->endpoint("getUpdates", $content);
         }
         return $this->updates;
